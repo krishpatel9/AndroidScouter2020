@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="20dp">
+
+  <TextView
+    android:id="@+id/codeTeamNumberID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/codeTitleID"
+    tools:text="Team 74" />
+
+  <TextView
+    android:id="@+id/codeMatchNumberID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="@+id/codeTeamNumberID"
+    app:layout_constraintTop_toBottomOf="@+id/codeTeamNumberID"
+    tools:text="Match 22" />
+
+  <TextView
+      android:id="@+id/codeTitleID"
+      android:layout_width="0dp"
+      android:layout_height="42dp"
+      android:background="@drawable/round_grid_primary"
+      android:padding="5dp"
+      android:text="@string/generate_code_title"
+      android:textAlignment="center"
+      android:textColor="@color/colorText"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/codeID"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingLeft="16dp"
+    android:paddingEnd="16dp"
+
+    android:paddingRight="16dp"
+    android:text="AAABF356GGX"
+    android:textAlignment="center"
+    android:textSize="36sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/codeMatchNumberID" />
+
+  <ImageView
+    android:id="@+id/qrCodeImageID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/ic_code_black_24dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/codeID" />
+
+  <Button
+      android:id="@+id/codeBtnID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      android:background="@drawable/round_grid_primary"
+      android:paddingStart="20dp"
+      android:paddingLeft="20dp"
+      android:paddingTop="5dp"
+      android:paddingEnd="20dp"
+      android:paddingRight="20dp"
+      android:paddingBottom="5dp"
+      android:text="@string/about_ok"
+      android:textColor="@color/colorText"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/qrCodeImageID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

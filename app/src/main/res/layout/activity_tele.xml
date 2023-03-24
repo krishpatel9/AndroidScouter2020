@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outerConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="56dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TeleActivity">
+
+  <ImageView
+      android:id="@+id/teleopImageID"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:adjustViewBounds="true"
+      android:background="@drawable/game_bg_p"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ScrollView
+      android:id="@+id/teleScrollView2"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      tools:layout_editor_absoluteX="-61dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="56dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="TeleActivity">
+
+      <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guideline2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent=".5" />
+
+      <TextView
+          android:id="@+id/teleTeamNumberID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="8dp"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="Team 75" />
+
+      <TextView
+          android:id="@+id/teleMatchNumberID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="@+id/teleTeamNumberID"
+          app:layout_constraintTop_toBottomOf="@+id/teleTeamNumberID"
+          tools:text="Match 22" />
+
+      <ImageView
+          android:id="@+id/teleAllianceFlagID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="8dp"
+          android:contentDescription="@string/DS_splash_page"
+          android:padding="3dp"
+          app:layout_constraintEnd_toStartOf="@+id/teleAllianceColorID"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/flag_blue" />
+
+      <TextView
+          android:id="@+id/teleAllianceColorID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginRight="8dp"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/teleAllianceFlagID"
+          tools:text="Blue Alliance" />
+
+      <TextView
+          android:id="@+id/teleControlPanelTitleID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="64dp"
+          android:layout_marginEnd="8dp"
+          android:text="@string/teleControlPanel"
+          android:textColor="@color/primaryText"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      //--- Cargo Success ---
+
+      //--- Cargo Failure ---
+
+      //--- Hatch Success ---
+
+      //--- Hatch Failure ---
+
+      <TextView
+          android:id="@+id/telePowerCellsTitleID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="8dp"
+          android:text="@string/auto_power_cells"
+          android:textColor="@color/primaryText"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout3ID" />
+
+      <TextView
+          android:id="@+id/teleRocketSuccessTextViewID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/success"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/guideline2"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/telePowerCellsTitleID" />
+
+      <TextView
+          android:id="@+id/teleRocketFailureTextViewID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/failure"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline2"
+          app:layout_constraintTop_toBottomOf="@+id/telePowerCellsTitleID" />
+
+      // ---- TOP TEXT ----
+
+      <TextView
+          android:id="@+id/textViewTopID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:rotation="-90"
+          android:text="@string/auto_inner_port"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/teleGridLayout7ID"
+          app:layout_constraintEnd_toStartOf="@+id/teleGridLayout7ID"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/teleGridLayout7ID" />
+
+      //--- Cargo TOP Success ---
+
+      <GridLayout
+          android:id="@+id/teleGridLayout1ID"
+          android:layout_width="0dp"
+          android:layout_height="51dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="32dp"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="5"
+          android:elevation="2dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleControlPanelTitleID">
+
+        <TextView
+            android:id="@+id/teleControlPanelAttemptedID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_vertical|fill"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            android:text="@string/tele_control_panel_attempted"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tele_clearBtn"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:background="@color/zxing_transparent"
+            android:scaleY="0.85"
+            android:text="@string/endGame_clear"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/teleControlPanelAttemptedRGID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation='horizontal'
+            app:layout_constrainedHeight="false">
+
+          <RadioButton
+              android:id="@+id/teleControlPanelAttemptedYesID"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginRight="12dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/yes"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+
+          <RadioButton
+              android:id="@+id/teleControlPanelAttemptedNoID"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="12dp"
+              android:layout_marginRight="12dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/no"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+
+
+        </RadioGroup>
+
+      </GridLayout>
+
+      <GridLayout
+          android:id="@+id/teleGridLayout2ID"
+          android:layout_width="0dp"
+          android:layout_height="51dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="5"
+          android:elevation="2dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout1ID">
+
+        <TextView
+            android:id="@+id/teleControlPanelStage1ID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_vertical|fill"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            android:text="@string/tele_rotation_control"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/teleStage1Speed"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|fill_horizontal|center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:max="5"
+            android:progress="5"
+            android:theme="@style/MySeekBar"
+            android:verticalScrollbarPosition="defaultPosition"
+            android:visibility="visible"
+            app:tickMarkTint="@color/colorWhite" />
+
+        <RadioGroup
+            android:id="@+id/teleControlPanelStage1RGID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation='horizontal'
+            app:layout_constrainedHeight="false">
+
+          <RadioButton
+              android:id="@+id/teleControlPanelStage1SuccessID"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/yes"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <RadioButton
+              android:id="@+id/teleControlPanelAttemptedFaliure"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/fail"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <RadioButton
+              android:id="@+id/teleControlPanelStage1FailedID"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/no"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+        </RadioGroup>
+
+      </GridLayout>
+
+      <GridLayout
+          android:id="@+id/teleGridLayout3ID"
+          android:layout_width="0dp"
+          android:layout_height="51dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="5"
+          android:elevation="2dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout2ID">
+
+        <TextView
+            android:id="@+id/teleControlPanelStage2ID"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_vertical|fill"
+            android:layout_margin="8dp"
+            android:padding="2dp"
+            android:text="@string/tele_position_control"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/teleStage2Speed"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|fill_horizontal|center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:max="5"
+            android:progress="0"
+            android:theme="@style/MySeekBar"
+            android:verticalScrollbarPosition="defaultPosition"
+            android:visibility="visible"
+            app:tickMarkTint="@color/colorWhite" />
+
+        <RadioGroup
+            android:id="@+id/teleControlPanelStage2RGID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation='horizontal'
+            app:layout_constrainedHeight="false">
+
+          <RadioButton
+              android:id="@+id/teleControlPanelStage2SuccessID"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/yes"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <RadioButton
+              android:id="@+id/telePositionControlAttemptedFaliure"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/fail"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+
+          <RadioButton
+              android:id="@+id/teleControlPanelStage2FailedID"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_weight="1"
+              android:buttonTint="@color/colorText"
+              android:text="@string/no"
+              android:textColor="@color/colorText"
+              android:textColorLink="@color/colorText"
+              android:textSize="14sp"
+              android:textStyle="bold" />
+        </RadioGroup>
+
+      </GridLayout>
+
+      <GridLayout
+          android:id="@+id/teleGridLayout7ID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          android:animateLayoutChanges="false"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toStartOf="@+id/guideline2"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleRocketSuccessTextViewID">
+
+        <TextView
+            android:id="@+id/telePowerCellInnerPortSuccessLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/telePowerCellInnerPortSuccessNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="13" />
+
+        <Button
+            android:id="@+id/telePowerCellInnerPortSuccessMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textIsSelectable="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellInnerPortSuccessPlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Cargo TOP Failure ---
+
+      <GridLayout
+          android:id="@+id/teleGridLayout8ID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline2"
+          app:layout_constraintTop_toBottomOf="@+id/teleRocketFailureTextViewID">
+
+        <TextView
+            android:id="@+id/telePowerCellInnerPortFailureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/telePowerCellInnerPortFailureNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/telePowerCellOuterPortInnerMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellInnerPortFailurePlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Hatch TOP Success ---
+
+      //--- Hatch TOP Failure ---
+
+      // ---- MID TEXT ----
+
+      <TextView
+          android:id="@+id/textViewMidID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:rotation="-90"
+          android:text="@string/auto_outer_port"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/teleGridLayout11ID"
+          app:layout_constraintEnd_toEndOf="@+id/textViewTopID"
+          app:layout_constraintStart_toStartOf="@+id/textViewTopID"
+          app:layout_constraintTop_toTopOf="@+id/teleGridLayout11ID" />
+
+      //--- Cargo MID Success ---
+
+      <GridLayout
+          android:id="@+id/teleGridLayout11ID"
+          android:layout_width="wrap_content"
+          android:layout_height="48dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toStartOf="@+id/guideline2"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout7ID">
+
+        <TextView
+            android:id="@+id/telePoweCellOuterPortSuccessLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/telePowerCellOuterPortSuccessNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/telePowerCellOuterPortSuccessMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellOuterPortSuccessPlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Cargo MID Failure ---
+
+      <GridLayout
+          android:id="@+id/teleGridLayout12ID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline2"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout8ID">
+
+        <TextView
+            android:id="@+id/telePowerCellOuterPortFailureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/telePowerCellOuterPortFailureNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/telePowerCellOuterPortFailureMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellOuterPortFailurePlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Hatch MID Success ---
+
+      //--- Hatch MID Failure ---
+
+      // ---- BOTTOM TEXT ----
+
+      <TextView
+          android:id="@+id/textViewBotID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:rotation="-90"
+          android:text="@string/auto_bottom_port"
+          android:textColor="@color/primaryText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/teleGridLayout15ID"
+          app:layout_constraintEnd_toEndOf="@+id/textViewMidID"
+          app:layout_constraintStart_toStartOf="@+id/textViewMidID"
+          app:layout_constraintTop_toTopOf="@+id/teleGridLayout15ID" />
+
+      //--- Cargo BOT Success ---
+
+      <GridLayout
+          android:id="@+id/teleGridLayout15ID"
+          android:layout_width="wrap_content"
+          android:layout_height="48dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginLeft="8dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toStartOf="@+id/guideline2"
+          app:layout_constraintHorizontal_weight="1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout11ID">
+
+        <TextView
+            android:id="@+id/telePoweCellBottomPortSuccessLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/telePowerCellBottomPortSuccessNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/telePowerCellBottomPortSuccessMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellBottomPortSuccessPlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Cargo BOT Failure ---
+
+
+      <GridLayout
+          android:id="@+id/teleGridLayout16ID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:paddingRight="4dp"
+          android:translationZ="2dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline2"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout12ID">
+
+        <TextView
+            android:id="@+id/telePowerCellBottomPortFailureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:paddingLeft="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/auto_cell_placement"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/telePowerCellBottomPortFailureNum"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/telePowerCellBottomPortFailureMinusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/telePowerCellBottomPortFailurePlusBtnID"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="1"
+            android:layout_gravity="fill_vertical"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+      </GridLayout>
+
+      //--- Hatch BOT Success ---
+
+      //--- Hatch BOT Failure ---
+
+      <RelativeLayout
+          android:id="@+id/bottom_row_of_field"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="32dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="32dp"
+          app:layout_constraintEnd_toStartOf="@+id/valGrid"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/teleGridLayout15ID"
+          tools:layout_constraintLeft_toLeftOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+          <ImageButton
+              android:id="@+id/zone3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:background="?attr/selectableItemBackground"
+              android:onClick="plus_zone_3_shots"
+              android:padding="6dp"
+              android:src="@drawable/zone3" />
+
+          <ImageButton
+              android:id="@+id/zone2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toLeftOf="@id/zone1"
+              android:background="?attr/selectableItemBackground"
+              android:onClick="plus_zone_2_shots"
+              android:padding="6dp"
+              android:src="@drawable/zone2" />
+
+          <ImageButton
+              android:id="@+id/zone1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/zone2"
+              android:background="?attr/selectableItemBackground"
+              android:onClick="plus_zone_1_shots"
+              android:padding="6dp"
+              android:src="@drawable/zone1" />
+
+        </LinearLayout>
+
+      </RelativeLayout>
+
+      <Button
+          android:id="@+id/teleopBtnID"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="24dp"
+          android:background="@color/colorPrimary"
+          android:drawableLeft="@drawable/paperplane"
+          android:drawablePadding="10dp"
+          android:elevation="2dp"
+          android:hapticFeedbackEnabled="true"
+          android:paddingStart="8dp"
+          android:paddingEnd="8dp"
+          android:stateListAnimator="@null"
+          android:text="@string/teleop_button"
+          android:textColor="@color/colorText"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:translationZ="2dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/bottom_row_of_field" />
+
+      <GridLayout
+          android:id="@+id/valGrid"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="32dp"
+          android:background="@drawable/round_grid"
+          android:columnCount="4"
+          android:elevation="2dp"
+          android:rowCount="4"
+          android:translationZ="2dp"
+          app:layout_constraintBottom_toBottomOf="@+id/bottom_row_of_field"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/bottom_row_of_field"
+          app:layout_constraintTop_toTopOf="@+id/bottom_row_of_field">
+
+        <TextView
+            android:id="@+id/tele_zone_3_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/zone_3_text"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/tele_zone_3_text"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_row="2"
+              android:layout_column="1"
+              android:layout_gravity="fill"
+              android:layout_margin="4dp"
+              android:gravity="start|center_vertical"
+              android:padding="3dp"
+              android:text="@string/ZERO"
+              android:textAlignment="center"
+              android:textColor="@android:color/white"
+              android:textSize="14sp"
+              android:textStyle="bold"
+              tools:text="0" />
+
+        <Button
+            android:id="@+id/zone3MinusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="minus_zone_3_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zone3PlusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="plus_zone_3_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+
+          <TextView
+            android:id="@+id/tele_zone_1_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/zone_1_text"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tele_zone_1_text"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_margin="4dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/ZERO"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/zone1MinusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="minus_zone_1_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zone1PlusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="plus_zone_1_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tele_zone_2_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/zone_2_text"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tele_zone_2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:layout_margin="4dp"
+            android:gravity="start|center_vertical"
+            android:padding="3dp"
+            android:text="@string/ZERO"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="0" />
+
+        <Button
+            android:id="@+id/zone2MinusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="minus_zone_2_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/minus"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/zone2PlusBtn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:onClick="plus_zone_2_shots"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/plus"
+            android:textSize="20sp" />
+
+      </GridLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

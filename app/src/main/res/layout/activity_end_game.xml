@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/outerConstraint"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:minHeight="56dp"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:context=".EndGameActivity">
+
+    <ImageView
+        android:id="@+id/endgameImageID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/game_bg_p"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+    <ScrollView
+        android:id="@+id/endGameScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/endGameConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="EndGameActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/endGameGuideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/endGameTeamNumberID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/primaryText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Team 75" />
+
+            <TextView
+                android:id="@+id/endGameMatchNumberID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primaryText"
+                android:textColorHint="@android:color/primary_text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/endGameTeamNumberID"
+                app:layout_constraintTop_toBottomOf="@+id/endGameTeamNumberID"
+                tools:text="Match 22" />
+
+            <ImageView
+                android:id="@+id/endGameAllianceFlagID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:contentDescription="@string/DS_splash_page"
+                android:padding="3dp"
+                app:layout_constraintEnd_toStartOf="@+id/endGameAllianceColorID"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/flag_blue" />
+
+            <TextView
+                android:id="@+id/endGameAllianceColorID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/primaryText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/endGameAllianceFlagID"
+                tools:text="Blue Alliance" />
+
+            <TextView
+                android:id="@+id/endGameSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/endgame_title"
+                android:textColor="@color/primaryText"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameMatchNumberID" />
+
+            <GridLayout
+                android:id="@+id/endGameGridLayout0ID"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_grid"
+                android:columnCount="5"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameSubTitle">
+
+                <TextView
+                    android:id="@+id/teleControlPanelStage1ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="fill_vertical|fill"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="@string/endgame_did_not_attempt"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/endGame_clearBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_vertical"
+                    android:background="@color/zxing_transparent"
+                    android:scaleY="0.85"
+                    android:text="@string/endGame_clear"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/endGameRGAttemptMadeID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation='horizontal'
+                    app:layout_constrainedHeight="false">
+
+                    <RadioButton
+                        android:id="@+id/endGameRGAttemptMadeYesID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/yes"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/endGameRGAttemptMadeNoID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/no"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/endGameGridLayout2ID"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_grid"
+                android:columnCount="4"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameGridLayout3ID">
+
+                <TextView
+                    android:id="@+id/endGameParkID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="fill_vertical|fill"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="@string/endgame_park"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/endGameRGParkID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation='horizontal'
+                    app:layout_constrainedHeight="false">
+
+                    <RadioButton
+                        android:id="@+id/endGameParkSuccessID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/success"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/endGameParkFailedID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/failure"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/endGameGridLayout3ID"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_grid"
+                android:columnCount="5"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameGridLayout0ID">
+
+                <TextView
+                    android:id="@+id/endGameHangID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="fill_vertical|fill"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="@string/endgame_hang"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/endGameRGHangPosID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation='horizontal'
+                    app:layout_constrainedHeight="false">
+
+                    <RadioButton
+                        android:id="@+id/endGameHangPosSideID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/endGame_side"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/endGameHangPosMidID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/endGame_mid"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/endGameRGHangID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation='horizontal'
+                    app:layout_constrainedHeight="false">
+
+                    <RadioButton
+                        android:id="@+id/endGameHangSuccessID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/success"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/endGameHangFailedID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/failure"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/endGameGridLayout4ID"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/round_grid"
+                android:columnCount="4"
+                android:elevation="2dp"
+                android:translationZ="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameGridLayout2ID">
+
+                <TextView
+                    android:id="@+id/endGameLevelID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_gravity="fill_vertical|fill"
+                    android:layout_margin="8dp"
+                    android:padding="2dp"
+                    android:text="@string/endgame_level"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/endGameRGLevelID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation='horizontal'
+                    app:layout_constrainedHeight="false">
+
+                    <RadioButton
+                        android:id="@+id/endGameLevelSuccessID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/success"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/endGameLevelFailedID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/colorText"
+                        android:text="@string/failure"
+                        android:textColor="@color/colorText"
+                        android:textColorLink="@color/colorText"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </GridLayout>
+
+            <Button
+                android:id="@+id/endGameSaveBtnID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimary"
+                android:drawableStart="@drawable/paperplane"
+                android:drawableLeft="@drawable/paperplane"
+                android:drawablePadding="10dp"
+                android:elevation="2dp"
+                android:hapticFeedbackEnabled="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:stateListAnimator="@null"
+                android:text="@string/endgame_save_match"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:translationZ="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameGridLayout4ID" />
+
+            <Button
+                android:id="@+id/endgameCodeButtonID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="200dp"
+                android:background="@color/colorPrimary"
+                android:drawableStart="@drawable/qrcode"
+                android:drawableLeft="@drawable/qrcode"
+                android:drawablePadding="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/endgame_qr_code"
+                android:textColor="@color/colorText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endGameSaveBtnID" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
